@@ -1,0 +1,15 @@
+@font-face {
+    font-family: HeywowBold;
+    src: url(./fonts/HeyWow-Bold.ttf);
+}
+
+@font-face {
+    font-family: HeywowBook;
+    src: url(./fonts/HeyWow-Book.ttf);
+}
+
+@font-face {
+    font-family: HeywowSB;
+    src: url(./fonts/HeyWow-SemiBold.ttf);
+}
+

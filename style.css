@@ -1,3 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #FDFAF5;
+    font-family: HeywowBook;
+}
+
 @font-face {
     font-family: HeywowBold;
     src: url(./fonts/HeyWow-Bold.ttf);
@@ -13,3 +25,326 @@
     src: url(./fonts/HeyWow-SemiBold.ttf);
 }
 
+main{
+    /* background-color: #FDFAF5; */
+}
+
+nav{
+    font-family: HeywowBold;
+    background-color: #ffffff;
+    font-size: 1.1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 3.5vw;
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: .3vw .5vw;
+    padding-left: 1.5vw;
+    border-radius: 100px;
+    z-index: 999;
+    overflow: hidden;
+}
+
+nav #part2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3.5vw;
+    
+}
+
+nav #part2 a{
+    text-decoration: none;
+    color: rgba(28, 27, 27, 0.87);
+}
+
+nav #part2 button{
+    padding: .8vw 1.7vw;
+    font-family: HeywowBold;
+    font-size: 1vw;
+    color: #FDFAF5;
+    background-color: #70A2E1;
+    border: none;
+    border-radius: 50px;
+}
+
+#page1{
+    height: fit-content;
+    width: 100%;
+    background-color: #FDFAF5;
+    /* padding: 0% 15%; */
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#heropart{
+    height: 63vh;
+    width: 100%;
+    background: #959292;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: -15vw; */
+    overflow: hidden;
+    padding: 0 15vw;
+
+}
+
+.b-letter{
+    height: 100%;
+    width: 15vw;
+    /* background-color: #223750; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative; 
+    /* z-index: -1; */
+}
+
+.b-letter4{
+    width: 6vw;
+}
+
+.flower1{
+    width: 16vw;
+    /* background-color:chartreuse;  */
+    transform-origin: 50% 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* rotate: 90deg; */
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+.flower-stem1{
+   
+    height: 100%;
+    position: relative;
+    top: 2vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.js-stem-path{
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+
+.flower2{
+    width: 15vw;
+    /* background-color:rgb(255, 115, 0);  */
+    transform-origin: 50% 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2vw;
+    /* rotate: 90deg; */
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+.flower-stem2{
+   
+    height: 100%;
+    position: relative;
+    top: 2.6vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.js-stem-path{
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+
+
+.flower3{
+    width: 15vw;
+    /* background-color:rgb(221, 255, 0);  */
+    transform-origin: 50% 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* rotate: 90deg; */
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+.flower-stem3{
+   
+    height: 100%;
+    position: relative;
+    top: 1.8vw;
+    left: 1vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.js-stem-path{
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+
+
+
+.flower4{
+    width: 4.3vw;
+    /* background-color:rgb(221, 255, 0);  */
+    transform-origin: 50% 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* rotate: 90deg; */
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+.flower-stem4{
+   
+    height: 100%;
+    position: relative;
+    top: 1.5vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.js-stem-path{
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+
+
+
+.flower5{
+    width: 16vw;
+    /* background-color:rgb(221, 255, 0);  */
+    transform-origin: 50% 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 3vw;
+    left: -2%;
+    /* rotate: 90deg; */
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+.flower-stem5{
+   
+    height: 100%;
+    position: relative;
+    top: 3.5vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.js-stem-path{
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+
+.flower6{
+    width: 14vw;
+    /* background-color:rgb(17, 0, 255);  */
+    transform-origin: 50% 90%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    position: absolute;
+    top: -3.1vw;
+    /* left: -11%; */
+    /* rotate: 90deg; */
+    /* position: absolute; */
+    /* z-index: 999; */
+}
+.flower-stem6{
+    height: 100%;
+    position: relative;
+    top: 3vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.js-stem-path{
+    stroke-width: 3px;
+    stroke: #000;
+    fill: none;
+}
+
+
+
+
+#herobottom{
+    height: 32vh;
+    width: 100%;
+    background-color: #fff;
+    /* margin: 1%; */
+    /* margin-top: 5%; */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8vw;
+    padding-left: 4.7vw;
+    /* padding-top: .4vw; */
+}
+
+#herobottom h1{
+    padding-top: 0.5vw;
+   font-size: 9vw;
+}
+
+#textpart{
+    width: 40%;
+    padding-top: .4vw;
+
+}
+
+#textpart h3{
+    font-size: 1.6vw;
+    font-family: HeywowSB;
+}
+
+#textpart p{
+    /* font-size: 1vw; */
+    padding-top: .5vw;
+    font-size: 1.2vw;
+    color: #000000a1;
+    /* letter-spacing: .1px; */
+}
+
+
+
+
+
+
+
+#page2{
+    min-height: 130vh;
+    width: 100%;
+    background-color: rgb(50, 38, 20);
+    /* padding: 0% 15%; */
+    /* padding-top: 10%; */
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(45, 29, 5);
+    /* padding: 0% 15%; */
+    /* padding-top: 5%; */
+}

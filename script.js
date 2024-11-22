@@ -65,21 +65,69 @@ document.querySelector('main').addEventListener('wheel', function(dets){
 
 navAnima()
 
-var flower = document.querySelectorAll('.flower')
+var flowers = document.querySelectorAll(".flower")
 var moving = 0 
 
-// pathvalue = "M 27.5 304.8 Q 27.5 127 25.309917886184234 0.009442025230507411 m -4.043801642276315 -4 a 4 4 0 1 0 8 0 a 4 4 0 1 0 -8 0"
-
-flowerdets = function(flower) {
+flowers.forEach(function(flower){
   
-flower.addEventListener("mousemove", function(dets){
-  // console.log(dets.movementX);
-  // flower.style.transform = `translateX(${dets.movementX}%)`
-  moving = dets.movementX/7
-  gsap.to(flower,{
-    transform : `translateX(${moving}%) rotate(${moving/2}deg)`,
-    // duration: 1
+  flower.addEventListener("mousemove", function(dets){
+    // console.log(dets.movementX);
+    // flower.style.transform = `translateX(${dets.movementX}%)`
+    moving = dets.movementX*1
+
+    gsap.to(flower,{
+      transform : `translateX(${moving}%) rotate(${moving*2}deg)`,
+      // duration: .5,
+      zIndex:99
+    })
+    
   })
   
+  flower.addEventListener("mouseleave", function(dets){
+    // console.log(dets.movementX);
+    // flower.style.transform = `translateX(${dets.movementX}%)`
+    moving = dets.movementX
+
+    gsap.to(flower,{
+      transform : `translateX(${0}%) rotate(${0}deg)`,
+      duration:1,
+      ease: "elastic.out(1,0.4)",
+    })
+    
+  })
+
+});
+
+
+
+var valueA = 25
+var stemUp = 50
+var stemDown = 0
+var direction = 1
+
+var stemPath = `M 27.5 304.8 Q 27.5 127 25.309917886184234 0.009442025230507411 m -4.043801642276315 -4 a 4 4 0 1 0 8 0 a 4 4 0 1 0 -8 0`
+
+setInterval(function(){
+
+var stemPath = `M 27.5 304.8 Q 27.5 127 ${valueA} 0.009442025230507411 m -4.043801642276315 -4 a 4 4 0 1 0 8 0 a 4 4 0 1 0 -8 0`
+valueA += direction
+
+if(valueA >= stemUp){
+  direction = -1
+} else if(valueA <= stemDown) {
+  direction = 1
+} 
+
+console.log(valueA);
+
+gsap.to('.stem path',{
+  attr:{d:stemPath}     
 })
-}
+
+gsap.to('.flower',{
+  transform : `translateX(${valueA/20}%) rotate(${valueA/5}deg)`,
+
+})
+
+
+},100)
